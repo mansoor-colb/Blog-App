@@ -15,13 +15,11 @@ const Nav = (prop) => {
     >
       
 
-      <div class="navbar-nav-right d-flex align-items-center"  >
+      <div class="navbar-nav-right d-flex align-items-center" id="uld" >
   
-        <div class="navbar-nav align-items-center">
-        <span class="display-5 " id="btitle">{prop.title}</span>
-        </div>
+        
          
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
+        <ul class="navbar-nav flex-row align-items-center ms-auto" id="ud">
         
         <div class="app-brand demo" >
            <NavLink to="/register">
@@ -93,6 +91,9 @@ const Nav = (prop) => {
        
       
         </ul>
+        <div class="navbar-nav align-items-center">
+        <span class="display-5 " id="btitle">{prop.title}</span>
+        </div>
       </div>
     </nav>
   )

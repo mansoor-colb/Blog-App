@@ -22,6 +22,7 @@ const Create = () => {
 
 
     const[prof,setprof]=useState([])
+    const[view,setview]=useState('0')
     const navigate = useNavigate();
 function logout()
 {
@@ -59,7 +60,7 @@ var uid= localStorage.getItem("blog");
 
 
         function uploadblog(){
-            alert(content.length)
+           
         
           var condition =true;
           if(title==''|| title.trim() ==''){
@@ -87,11 +88,18 @@ var uid= localStorage.getItem("blog");
             let day = d.getDay()
             let year=d.getFullYear()
             let f=` ${day},${monthName} ${year}`
-
+            let it='';
+            if(view){
+              it=1;
+            }
+            else{
+              it=0
+            }
+              alert(it)
             var options = {
               method: 'POST',
               url: 'http://127.0.0.1:8000/vlogapi/createblog/',
-              data: {"uid":uid,"title":title,"blogid":otp,"content":content,"date":f,"category":category}
+              data: {"uid":uid,"title":title,"blogid":otp,"content":content,"date":f,"category":category,"view":it}
             };
             
             axios.request(options).then(function (response) {
@@ -124,6 +132,10 @@ var uid= localStorage.getItem("blog");
             newcclass('pst')
 
         }
+       
+    }
+    function swit(){
+      setview(!view)
     }
   return (
     <div class="layout-wrapper layout-content-navbar">
@@ -243,6 +255,11 @@ var uid= localStorage.getItem("blog");
                           {/* 
                           <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"></textarea> */}
                         </div>
+                        <div class="form-check m-16" >
+                        {/* <input class="form-check-input" type="checkbox" onChange={swit} id="flexSwitchCheckChecked" checked=""/> */}
+                            <input class="form-check-input" type="checkbox"  onChange={swit} />
+                            <label class="form-check-label" for="defaultCheck3">Blog will be uploaded as {view?"Public":"Private"} </label>
+                          </div>
                         <div class="mt-2">
                           <button type="submit" class="btn btn-primary me-2" onClick={uploadblog}>Save changes</button>
                           <button type="reset" class="btn btn-outline-secondary" onClick={godash}>Cancel</button>

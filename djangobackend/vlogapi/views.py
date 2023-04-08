@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .serializers import StudentSerializer,UserSerializers,otpSerializer,blogSerializer
+from .serializers import StudentSerializer,UserSerializers,otpSerializer,blogSerializer,followersSerializer
 from rest_framework.generics import ListAPIView,RetrieveUpdateDestroyAPIView
-from .models import Student,users,otp,blogs
+from .models import Student,users,otp,blogs,followers
 import io
 from rest_framework.parsers import JSONParser
 from rest_framework.renderers import JSONRenderer
@@ -32,6 +32,10 @@ class StudentList(ListAPIView):
 class blogList(ListAPIView):
     serializer_class=blogSerializer  
     queryset=blogs.objects.all()
+
+class followList(ListAPIView):
+    serializer_class=followersSerializer  
+    queryset=followers.objects.all()
 
 class userList(ListAPIView):
     serializer_class=UserSerializers 
@@ -456,6 +460,49 @@ def get_blog_bid(request) :
                 stiu= blogs.objects.get(blogid=bloguid)
                 
                 serialize = blogSerializer(stiu)
+                
+                x=serialize.data
+                
+                json_data = JSONRenderer().render(x)
+        
+               
+                return HttpResponse(json_data,content_type="application/json")
+            return HttpResponse(JSONRenderer().render({"codes":89}),content_type='application/json')
+        except blogs.DoesNotExist:
+             
+            return HttpResponse(JSONRenderer().render({"codes":999}),content_type='application/json')
+
+@csrf_exempt
+def followers_create (request):
+    if request.method == 'POST':
+        json_data = request. body
+        stream =io.BytesIO (json_data)
+        python_data = JSONParser().parse(stream)
+        serializer = followersSerializer(data=python_data)
+        if serializer.is_valid () :
+            serializer. save ()
+            res={'msg': 'Data Created Successfully ' }
+            json_data = JSONRenderer().render(res)
+            return HttpResponse (json_data, content_type= 'application/json')
+        return HttpResponse(JSONRenderer().render(serializer.errors),content_type='application/json')
+
+
+@csrf_exempt
+def get_follow_uid(request) :
+   
+    if (request.method == "POST"):
+        json_data = request.body
+        stream= io.BytesIO(json_data)
+        python_data = JSONParser().parse(stream)
+        bloguid = python_data.get("uid")
+    
+        try:
+        
+   
+            if bloguid is not None:
+                stiu= followers.objects.all()
+                
+                serialize = followersSerializer(stiu)
                 
                 x=serialize.data
                 

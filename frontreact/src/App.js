@@ -9,6 +9,9 @@ import Fogotpass from './Components/Fogotpass';
 import Profile from './Components/Profile';
 import Create from './Components/Create';
 import Blogs from './Components/Blogs';
+import Explore from './Components/Explore';
+import User from './Components/User';
+
 function App() {
 
 
@@ -63,6 +66,8 @@ function App() {
       <Route exact path='/editprof' Component={Profile}/>
       <Route exact path='/create' Component={Create}/>
       <Route exact path='/blogs' Component={Blogs}/>
+      <Route exact path='/explore' Component={Explore}/>
+      <Route exact path='/userProfile' Component={User}/>
     </Routes>
     
     </div>

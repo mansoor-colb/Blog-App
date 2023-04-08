@@ -15,10 +15,11 @@ const Blogs = () => {
   const [cat, setcat] = useState("");
   const [prof, setprof] = useState("");
   const [mail, setmail] = useState("");
+  const [uid, setuid] = useState("612543");
 
 
   function getprofile(){
-    var uid=localStorage.getItem("blog")
+  
        
         
 
@@ -52,6 +53,7 @@ const Blogs = () => {
           setcont(response.data.content);
           setitle(response.data.title);
 setcat(response.data.category)
+setuid(response.data.uid)
           console.log(response.data);
         })
         .catch(function (error) {
@@ -65,8 +67,8 @@ setcat(response.data.category)
   console.log(1)
   useEffect(() => {
     getblog();
-    getprofile()
   }, []);
+  getprofile()
 
   return (
     <div id="blogcont">

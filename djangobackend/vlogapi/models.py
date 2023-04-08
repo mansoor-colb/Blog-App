@@ -25,7 +25,12 @@ class users(models.Model):
     password=models.CharField(max_length=100)
     phone=models.CharField(max_length=100)
     email=models.CharField(max_length=100)
+   
 
+class followers(models.Model):
+    user=models.ForeignKey(users,on_delete=models.CASCADE, db_column='uid',)
+    follower=models.CharField(max_length=100,  blank=True)
+    following=models.CharField(max_length=100, blank=True)
 
 class otp(models.Model):
     otp=models.CharField(max_length=10)
@@ -38,3 +43,4 @@ class blogs(models.Model):
     category=models.CharField(max_length=100)
     content=models.CharField(max_length=500000)
     date=models.CharField(max_length=100)
+    view=models.CharField(max_length=100,default=1)

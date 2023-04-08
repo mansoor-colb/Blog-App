@@ -11,6 +11,11 @@
   right: 0px;
   height: 90px;
 }
+#followcheck{
+  margin-left: 45px;
+
+    margin-top: 10px;
+}
 .finalsub{
   display: none;
 }
@@ -18,8 +23,11 @@
   display: flex;
   margin-top: 3px;
 }
-aside{
-  /* overflow: scroll; */
+#cardflo{
+margin: 1px !important;
+}
+#nv{
+  margin-left: 15px;
 }
 .ast{
   transform:translate3d(0%, 0, 0)
@@ -31,6 +39,7 @@ aside{
 #tit,#btitle{
   text-transform: capitalize;
 }
+
 #blogcont{
   /* margin: 5px; */
   padding: 10px;
@@ -54,6 +63,17 @@ aside{
   border: 2px solid #697a8d;
 /* background-color: red; */
 }
+
+.blogprof{
+  margin-top: 5px;
+  min-height: 90vh;
+  width: 95%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #697a8d;
+  display: flex;
+/* background-color: red; */
+}
 .footblog{
   padding: 10px;
   margin-top: 3px;
@@ -63,6 +83,15 @@ aside{
   border-radius: 12px;
   border: 2px solid #697a8d;
 }
+#uld{
+  justify-content: space-between !important;
+}
+#ud{
+  margin-left: 0px !important;
+}
+#pub{
+  font-weight: 100;
+}
 @media only screen and (min-width:400px) {
   #cardreg,#cardlog,#cardfor{
     width: 520px;
@@ -71,6 +100,7 @@ aside{
     transform:translate3d(0%, 0, 0)
   
   }
+  
   #containerblog{
     display: flex;
     flex-wrap: wrap;
@@ -87,9 +117,13 @@ aside{
   .card-link{
 margin-left: 12px;
   }
+  
 }
 
 @media (max-width: 1199.98px){
+  .blogprof{
+    flex-direction: column;
+  }
 .layout-menu {
     position: fixed !important;
     top: 80px !important;

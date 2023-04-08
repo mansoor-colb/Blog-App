@@ -1,0 +1,13 @@
+var axios = require("axios").default;
+
+var options = {
+  method: 'POST',
+  url: 'http://127.0.0.1:8000/vlogapi/createfollow/',
+  data: {user: '654321', follower: 'zain', following: 'sdd'}
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+});

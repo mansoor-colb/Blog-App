@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Student,users,otp,blogs
+from .models import Student,users,otp,blogs,followers
 
 
 @admin.register(Student)
@@ -14,6 +14,11 @@ class otp(admin.ModelAdmin):
 class User(admin.ModelAdmin):
     list_display=['uid','username','password','phone','email']
 # Register your models here.
+
 @admin.register(blogs)
-class User(admin.ModelAdmin):
-    list_display=['blogid','uid','title','category','content','date']
+class blogs(admin.ModelAdmin):
+    list_display=['blogid','uid','title','category','content','date','view']
+
+@admin.register(followers)
+class Followers(admin.ModelAdmin):
+    list_display=['user','follower','following']
