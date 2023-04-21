@@ -18,4 +18,6 @@ urlpatterns = [
     path("deleteuser/", views.delete_user,name='deleteuser'),
     path("getotp/", views.get_otp,name='getotp'),
     path("forgotpass/", views.forgot_pass,name='getotp'),
+    path("feedcreate/", views.feed_create,name='getotp'),
+    path("feedlist/",views.feedList.as_view()),
 ]

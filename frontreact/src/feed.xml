@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Blog]]></title>
+        <description><![CDATA[Blog]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Wed, 19 Apr 2023 12:20:04 GMT</lastBuildDate>
+        <item>
+            <title><![CDATA[ee]]></title>
+            <description><![CDATA[Tech]]></description>
+            <link>http://localhost:3000/blogs?blogsid=51969292</link>
+            <guid isPermaLink="false">51969292</guid>
+            <category><![CDATA[Tech]]></category>
+            <pubDate>Sat, 01 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[first]]></title>
+            <description><![CDATA[Bussiness]]></description>
+            <link>http://localhost:3000/blogs?blogsid=90653976</link>
+            <guid isPermaLink="false">90653976</guid>
+            <category><![CDATA[Bussiness]]></category>
+            <pubDate>Sun, 02 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ff]]></title>
+            <description><![CDATA[Nature]]></description>
+            <link>http://localhost:3000/blogs?blogsid=19343474</link>
+            <guid isPermaLink="false">19343474</guid>
+            <category><![CDATA[Nature]]></category>
+            <pubDate>Mon, 03 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[turbo change]]></title>
+            <description><![CDATA[Bussiness]]></description>
+            <link>http://localhost:3000/blogs?blogsid=81080290</link>
+            <guid isPermaLink="false">81080290</guid>
+            <category><![CDATA[Bussiness]]></category>
+            <pubDate>Invalid Date</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[first blog]]></title>
+            <description><![CDATA[Tech]]></description>
+            <link>http://localhost:3000/blogs?blogsid=74259416</link>
+            <guid isPermaLink="false">74259416</guid>
+            <category><![CDATA[Tech]]></category>
+            <pubDate>Fri, 31 Mar 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[computer science]]></title>
+            <description><![CDATA[Tech]]></description>
+            <link>http://localhost:3000/blogs?blogsid=61084413</link>
+            <guid isPermaLink="false">61084413</guid>
+            <category><![CDATA[Tech]]></category>
+            <pubDate>Tue, 04 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[aa]]></title>
+            <description><![CDATA[Politics]]></description>
+            <link>http://localhost:3000/blogs?blogsid=42299126</link>
+            <guid isPermaLink="false">42299126</guid>
+            <category><![CDATA[Politics]]></category>
+            <pubDate>Wed, 05 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[eeepoouunnnnn]]></title>
+            <description><![CDATA[Bussiness]]></description>
+            <link>http://localhost:3000/blogs?blogsid=94285799</link>
+            <guid isPermaLink="false">94285799</guid>
+            <category><![CDATA[Bussiness]]></category>
+            <pubDate>Sun, 02 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[wwwqqeeee]]></title>
+            <description><![CDATA[Nature]]></description>
+            <link>http://localhost:3000/blogs?blogsid=33580704</link>
+            <guid isPermaLink="false">33580704</guid>
+            <category><![CDATA[Nature]]></category>
+            <pubDate>Sun, 02 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

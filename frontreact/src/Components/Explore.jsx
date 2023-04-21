@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import axios from "axios";
 import Header from './Header';
 import Nav from './Nav';
+// import './feed.xml'
 const Explore = () => {
 
     const navigate = useNavigate();
@@ -115,7 +116,7 @@ function followers(){
    
     <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
-  
+   
     <Header stat={cclass}/>
    
       
@@ -204,8 +205,9 @@ function followers(){
 
       
         <div class="content-wrapper">
-      
+     
         <span class="display-4 ml-5 mt-2">Explore</span>
+      
         <div class="form-check m-16" id="followcheck">
                             <input class="form-check-input" type="checkbox" onChange={swit} />
                             <label class="form-check-label" for="defaultCheck3"> Following </label>

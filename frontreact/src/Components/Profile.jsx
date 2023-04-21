@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 import Header from './Header';
+import car from '../feed.xml';
 import Nav from './Nav';
 
 const Profile = () => {

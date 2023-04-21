@@ -1,23 +1,53 @@
 import React,{useEffect,useState} from 'react'
 import { NavLink } from 'react-router-dom'
-
+import car from '../feed/feed235732.xml';
 import {useNavigate} from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+// import fs from "fs"
 import axios from "axios";
 import Header from './Header';
 import Nav from './Nav';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import ReactDOMServer from 'react-dom/server';
+// import RssFeed from './RssFeed';
+// import fs from 'fs';
+
 const User = () => {
-    const location = useLocation();
-    const queryParameters = new URLSearchParams(location.search);
-    const type = queryParameters.get("uid");
-    const navigate = useNavigate();
+const location = useLocation();
+const queryParameters = new URLSearchParams(location.search);
+const type = queryParameters.get("uid");
+const navigate = useNavigate();
  const[prof,setprof]=useState([0])
  const[blogs,setblogs]=useState([])
  const[follow,setfollowers]=useState([])
 const[flag,setflag]=useState(false)
+let uid= localStorage.getItem("blog");
 
+// async function rss(){
+//  let blog=[];
+//   let options = {method: 'GET', url: 'http://127.0.0.1:8000/vlogapi/blogs/'};
+//  axios.request(options).then(function (response) {
+//     console.log(response.data);
+//     for(let i of response.data){
+//       if(i.view==1 ){
+//       blog.push(i)
+//       }
+//     }
+//   const xmlString = ReactDOMServer.renderToStaticMarkup(<RssFeed items={blog}/>).then(function(){
+//     console.log(xmlString);
+// console.log(4)
+// const directory = '../frontreact/src/feeds';
+// const fileName = `${uid} feed.xml`;
+// const filePath = `${directory}/${fileName}`
+// const file = new File([xmlString],  filePath , { type: "xml" });
+//   })
+
+
+// }  ).catch(function (error) {
+//     console.error(error);
+//   });
+// }
  useEffect(() => {
   
     getblogs();
@@ -31,7 +61,7 @@ function logout()
     navigate("/login")
     
 }
-let uid= localStorage.getItem("blog");
+
 function getblogs(){
     
 
@@ -176,9 +206,18 @@ function getblogs(){
             }) 
         }
     }
-    
+    var op='';
+    const images = require.context('../feed/', true, /\.(xml)$/);
+    const imageList = images.keys().map((imagePath, index) => {
+      console.log(imagePath)
+      let r="./feed"+type+".xml";
+      console.log(r)
+      if(imagePath==r){
 
-     
+        op=imagePath
+      }
+      console.log(images(imagePath))
+    })
   return (
    
   
@@ -212,6 +251,10 @@ function getblogs(){
    
        </div>
        <span class="display-4  mt-12" id="pub">Published Blogs</span>
+  <a href={images(op)}>
+  {/* <a href='/static/media/feed/feed235732.xml'> */}
+<img src="https://www.w3schools.com/xml/pic_rss.gif"  width="36" height="14"/></a>
+
        <div class="blogprof">
 
        {

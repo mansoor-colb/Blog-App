@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Student,users,otp,blogs,followers
+from .models import Student,users,otp,blogs,followers,feed
 
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -48,3 +48,10 @@ class followersSerializer(serializers.ModelSerializer):
         model=followers
         # fields=['id','stuname','email']
         fields=['user','follower','following' ]
+
+class feedSerializer(serializers.ModelSerializer):
+  
+    class Meta:
+        model=feed
+        # fields=['id','stuname','email']
+        fields=['user','feedname','feedurl' ]

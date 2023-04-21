@@ -1,6 +1,7 @@
 
 import './App.css';
 import axios from "axios";
+
 import Login from './Components/Login';
 import Register from './Components/Register';
 import {Switch,Route, Routes} from "react-router-dom";
@@ -11,6 +12,8 @@ import Create from './Components/Create';
 import Blogs from './Components/Blogs';
 import Explore from './Components/Explore';
 import User from './Components/User';
+import Rss from './Components/RssFeed';
+import Display from './Components/Display';
 
 function App() {
 
@@ -68,6 +71,8 @@ function App() {
       <Route exact path='/blogs' Component={Blogs}/>
       <Route exact path='/explore' Component={Explore}/>
       <Route exact path='/userProfile' Component={User}/>
+      <Route exact path='/feed' Component={Rss}/>
+      <Route exact path='/display' Component={Display}/>
     </Routes>
     
     </div>

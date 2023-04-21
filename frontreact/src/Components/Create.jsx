@@ -7,10 +7,48 @@ import Nav from './Nav';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import JoditEditor from 'jodit-react';
+// import { req } from "../../feed.mjs";
+
+
 
 import swal from 'sweetalert';
 
 const Create = () => {
+  // const [selectedFile, setSelectedFile] = useState(null);
+  // const [previewSource, setPreviewSource] = useState(null);
+
+
+
+
+  // const handleFileChange = (event) => {
+  //   const file = event.target.files[0];
+  //   setSelectedFile(file);
+  //   previewFile(file);
+  // };
+
+  // const previewFile = (file) => {
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(file);
+  //   reader.onloadend = () => {
+  //     setPreviewSource(reader.result);
+  //   };
+  // };
+
+  // const handleUpload = () => {
+  //   const formData = new FormData();
+  //   formData.append('image', selectedFile);
+
+  //   axios.post('/api/upload/', formData, {
+  //     headers: {
+  //       'Content-Type': 'multipart/form-data',
+  //     },
+  //   }).then((response) => {
+  //     console.log(response.data);
+  //   }).catch((error) => {
+  //     console.log(error);
+  //   });
+  // };
+
 
     const [title, setitle]=useState("");
     
@@ -96,13 +134,23 @@ var uid= localStorage.getItem("blog");
               it=0
             }
               alert(it)
+              // const fileReader = new FileReader();
+              // fileReader.readAsDataURL(selectedFile);
+              // fileReader.onloadend = () => {
+              //   const imageBase64 = fileReader.result.split(',')[1];
             var options = {
               method: 'POST',
               url: 'http://127.0.0.1:8000/vlogapi/createblog/',
               data: {"uid":uid,"title":title,"blogid":otp,"content":content,"date":f,"category":category,"view":it}
             };
             
-            axios.request(options).then(function (response) {
+            axios.request(options
+            //   {
+            //   headers: {
+            //     'Content-Type': 'application/json',
+            //   },
+            // }
+            ).then(function (response) {
                 if(response.data.codes){
                     swal("Something went Wrong","Error","error")
                 }
@@ -225,8 +273,14 @@ var uid= localStorage.getItem("blog");
                     <span class="display-4 ">bLOG</span>
                       <small class="text-muted float-end">What's goin on Today??</small>
                     </div>
+                    
                     <div class="card-body">
                       <div>
+                      {/* <p>Select cover Image</p>
+                    <input type="file" onChange={handleFileChange} />
+                      {previewSource && (
+                        <img id="prev" src={previewSource} alt="Preview" style={{ height: '200px' }} />
+                     )} */}
                         <div class="mb-3">
                           <label class="form-label" for="basic-default-fullname">Title</label>
                           <input onChange={(e)=>setitle(e.target.value)} type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe"/>

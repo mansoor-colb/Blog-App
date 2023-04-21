@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Student,users,otp,blogs,followers
+from .models import Student,users,otp,blogs,followers,feed
 
 
 @admin.register(Student)
@@ -22,3 +22,7 @@ class blogs(admin.ModelAdmin):
 @admin.register(followers)
 class Followers(admin.ModelAdmin):
     list_display=['user','follower','following']
+
+@admin.register(feed)
+class Feeds(admin.ModelAdmin):
+    list_display=['user','feedname','feedurl']

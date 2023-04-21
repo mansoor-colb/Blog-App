@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Bloxg]]></title>
+        <description><![CDATA[Blog is a platform for people to exprees their ideas to world.]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 21 Apr 2023 16:29:06 GMT</lastBuildDate>
+        <author><![CDATA[zain]]></author>
+        <item>
+            <title><![CDATA[turbo change]]></title>
+            <description><![CDATA[Bussiness]]></description>
+            <link>http://localhost:3000/blogs?blogsid=81080290</link>
+            <guid isPermaLink="false">81080290</guid>
+            <category><![CDATA[Bussiness]]></category>
+            <dc:creator><![CDATA[zain]]></dc:creator>
+            <pubDate>Invalid Date</pubDate>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Bloxg]]></title>
+        <description><![CDATA[Blog is a platform for people to exprees their ideas to world.]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 21 Apr 2023 16:29:06 GMT</lastBuildDate>
+        <author><![CDATA[Mansoor]]></author>
+        <item>
+            <title><![CDATA[computer science]]></title>
+            <description><![CDATA[Tech]]></description>
+            <link>http://localhost:3000/blogs?blogsid=61084413</link>
+            <guid isPermaLink="false">61084413</guid>
+            <category><![CDATA[Tech]]></category>
+            <dc:creator><![CDATA[Mansoor]]></dc:creator>
+            <pubDate>Tue, 04 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[aa]]></title>
+            <description><![CDATA[Politics]]></description>
+            <link>http://localhost:3000/blogs?blogsid=42299126</link>
+            <guid isPermaLink="false">42299126</guid>
+            <category><![CDATA[Politics]]></category>
+            <dc:creator><![CDATA[Mansoor]]></dc:creator>
+            <pubDate>Wed, 05 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[eeepoouunnnnn]]></title>
+            <description><![CDATA[Bussiness]]></description>
+            <link>http://localhost:3000/blogs?blogsid=94285799</link>
+            <guid isPermaLink="false">94285799</guid>
+            <category><![CDATA[Bussiness]]></category>
+            <dc:creator><![CDATA[Mansoor]]></dc:creator>
+            <pubDate>Sun, 02 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[wwwqqeeee]]></title>
+            <description><![CDATA[Nature]]></description>
+            <link>http://localhost:3000/blogs?blogsid=33580704</link>
+            <guid isPermaLink="false">33580704</guid>
+            <category><![CDATA[Nature]]></category>
+            <dc:creator><![CDATA[Mansoor]]></dc:creator>
+            <pubDate>Sun, 02 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

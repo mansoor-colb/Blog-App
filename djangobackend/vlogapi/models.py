@@ -44,3 +44,14 @@ class blogs(models.Model):
     content=models.CharField(max_length=500000)
     date=models.CharField(max_length=100)
     view=models.CharField(max_length=100,default=1)
+
+
+
+
+
+
+
+class feed(models.Model):
+    user=models.CharField(max_length=100)
+    feedname=models.CharField(max_length=100)
+    feedurl=models.CharField(max_length=100)

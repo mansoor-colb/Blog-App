@@ -1,11 +1,17 @@
 
-$(document).ready(function(){
-//     $("#asi").on("click",function(){
-// // $("#layout-menu").css({"transform":"translate3d(0%, 0, 0)"});
-// $("#layout-menu").toggleClass("ast");
-// // alert(4)
-//   })
+function h(){
+  alert(4)
 
+}
+async function fn1 () {
+  let Parser = require('rss-parser');
+let parser = new Parser();
 
+  let feed = await parser.parseURL('https://www.reddit.com/.rss');
+  console.log(feed.title);
 
-})
+  feed.items.forEach(item => {
+    console.log(item.title + ':' + item.link)
+  });
+
+}

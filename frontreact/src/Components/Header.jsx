@@ -112,6 +112,16 @@ const Header = (prop) => {
             </a>
             </NavLink>
           </li>
+          
+          <li class="menu-item">
+          <NavLink to="/feed">
+            <a href="#" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-extension"></i>
+              <div data-i18n="Basic">Feeds</div>
+            </a>
+            </NavLink>
+          </li>
+          
 
      
           

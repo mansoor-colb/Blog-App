@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .serializers import StudentSerializer,UserSerializers,otpSerializer,blogSerializer,followersSerializer
+from .serializers import StudentSerializer,UserSerializers,otpSerializer,blogSerializer,followersSerializer,feedSerializer
 from rest_framework.generics import ListAPIView,RetrieveUpdateDestroyAPIView
-from .models import Student,users,otp,blogs,followers
+from .models import Student,users,otp,blogs,followers,feed
 import io
 from rest_framework.parsers import JSONParser
 from rest_framework.renderers import JSONRenderer
@@ -45,6 +45,26 @@ class userList(ListAPIView):
 class userDetail(RetrieveUpdateDestroyAPIView):
     queryset = users.objects.all()
     serializer_class = UserSerializers 
+
+class feedList(ListAPIView):
+    serializer_class=feedSerializer  
+    queryset=feed.objects.all()
+
+@csrf_exempt
+def feed_create (request):
+    print(888)
+    if request.method == 'POST':
+        json_data = request. body
+        stream =io.BytesIO (json_data)
+        python_data = JSONParser().parse(stream)
+        serializer = feedSerializer(data=python_data)
+        if serializer.is_valid () :
+            serializer. save ()
+            res={'msg': 'Data Created Successfully ' }
+            json_data = JSONRenderer().render(res)
+            return HttpResponse (json_data, content_type= 'application/json')
+        return HttpResponse(JSONRenderer().render({"codes":89}),content_type='application/json')
+    
 
 @csrf_exempt
 def user_create (request):
@@ -471,6 +491,21 @@ def get_blog_bid(request) :
         except blogs.DoesNotExist:
              
             return HttpResponse(JSONRenderer().render({"codes":999}),content_type='application/json')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @csrf_exempt
 def followers_create (request):

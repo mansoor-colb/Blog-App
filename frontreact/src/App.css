@@ -5,6 +5,16 @@
   align-items: center;
 
 }
+a{
+  text-decoration: none !important;
+
+}
+
+#prev{
+  margin-top: 10px;
+  max-width: 100%;
+
+}
 #tosttop{
   position: absolute;
   top: 0px;
@@ -39,7 +49,9 @@ margin: 1px !important;
 #tit,#btitle{
   text-transform: capitalize;
 }
-
+#igp{
+  width: 750px;
+}
 #blogcont{
   /* margin: 5px; */
   padding: 10px;
@@ -92,7 +104,12 @@ margin: 1px !important;
 #pub{
   font-weight: 100;
 }
+#fimg{
+  height: 200px;
+  object-fit: contain;
+}
 @media only screen and (min-width:400px) {
+
   #cardreg,#cardlog,#cardfor{
     width: 520px;
   }
@@ -121,6 +138,9 @@ margin-left: 12px;
 }
 
 @media (max-width: 1199.98px){
+  #igp{
+    width: 325px;
+  }
   .blogprof{
     flex-direction: column;
   }

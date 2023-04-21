@@ -16,6 +16,7 @@ const Blogs = () => {
   const [prof, setprof] = useState("");
   const [mail, setmail] = useState("");
   const [uid, setuid] = useState("612543");
+  
 
 
   function getprofile(){
